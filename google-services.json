@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "771546024735",
+    "project_id": "aplicacion-firebase-66786",
+    "storage_bucket": "aplicacion-firebase-66786.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771546024735:android:013efa34aca6d08b27be2a",
+        "android_client_info": {
+          "package_name": "com.juanguachi.firebaseaplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771546024735-cjs03r6lqp6qfm0ec8608642fbofh3ec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa0nQb6Il3QbZ9z4eRWBsC21W3aYVE_Rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771546024735-cjs03r6lqp6qfm0ec8608642fbofh3ec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771546024735:android:01cea8e8e6d457bc27be2a",
+        "android_client_info": {
+          "package_name": "com.juanguachi.pizzeria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771546024735-cjs03r6lqp6qfm0ec8608642fbofh3ec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa0nQb6Il3QbZ9z4eRWBsC21W3aYVE_Rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771546024735-cjs03r6lqp6qfm0ec8608642fbofh3ec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

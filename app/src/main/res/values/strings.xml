@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Pizzeria</string>
+    <string name="codigo">Codigo</string>
+    <string name="nombre">Nombre</string>
+    <string name="tamaño">Tamaño</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="costo">Costo</string>
+    <string name="pvp">PVP</string>
+    <string name="promocion">Promocion</string>
+    <string name="guardar">Guardar</string>
+    <string name="listar">Listar</string>
+</resources>
