@@ -9,4 +9,6 @@
     <string name="promocion">Promocion</string>
     <string name="guardar">Guardar</string>
     <string name="listar">Listar</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
 </resources>

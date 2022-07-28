@@ -93,6 +93,20 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/listar" />
+
+            <Button
+                android:id="@+id/btn_editar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/editar" />
+
+            <Button
+                android:id="@+id/btn_eliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/eliminar" />
         </LinearLayout>
 
         <LinearLayout

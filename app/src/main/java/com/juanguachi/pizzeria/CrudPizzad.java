@@ -26,6 +26,12 @@ public class CrudPizzad extends AppCompatActivity {
 
         Button btn_listar=(Button) findViewById(R.id.btn_listar);
         btn_listar.setOnClickListener(listarListener);
+
+        Button btn_editar=(Button) findViewById(R.id.btn_editar);
+        btn_editar.setOnClickListener(editarListener);
+
+        Button btn_eliminar=(Button) findViewById(R.id.btn_eliminar);
+        btn_eliminar.setOnClickListener(eliminarListener);
     }
 
     View.OnClickListener guardarListener=new View.OnClickListener() {
@@ -82,5 +88,52 @@ public class CrudPizzad extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"Listando", Toast.LENGTH_LONG).show();
     }
 
+    View.OnClickListener editarListener=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            EditText txt_codigo=(EditText) findViewById(R.id.txt_codigo);
+            EditText txt_nombre=(EditText) findViewById(R.id.txt_nombre);
+            EditText txt_tamaño=(EditText) findViewById(R.id.txt_tamaño);
+            EditText txt_ingredientes=(EditText) findViewById(R.id.txt_ingredientes);
+            EditText txt_costo=(EditText) findViewById(R.id.txt_costo);
+            EditText txt_pvp=(EditText) findViewById(R.id.txt_pvp);
+            EditText txt_promocion=(EditText) findViewById(R.id.txt_promocion);
 
+            Pizza pizza=new Pizza();
+
+            pizza.setCodigo(txt_codigo.getText().toString());
+            pizza.setCosto(txt_costo.getText().toString());
+            pizza.setIngredientes(txt_ingredientes.getText().toString());
+            pizza.setNombre(txt_nombre.getText().toString());
+            pizza.setPromocion(txt_promocion.getText().toString());
+            pizza.setPvp(txt_pvp.getText().toString());
+            pizza.setTamaño(txt_tamaño.getText().toString());
+
+            if(txt_codigo.getText().toString().isEmpty() || txt_nombre.getText().toString().isEmpty()){
+                Toast.makeText(getApplicationContext(), "Complete todos los campos", Toast.LENGTH_LONG).show();
+            }else {
+                pizza.EditarPizza(getApplicationContext());
+                Toast.makeText(getApplicationContext(), "Pizza editada", Toast.LENGTH_LONG).show();
+                listarPersonas();
+            }
+        }
+    };
+
+    View.OnClickListener eliminarListener=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            EditText txt_codigo=(EditText) findViewById(R.id.txt_codigo);
+
+            Pizza pizza=new Pizza();
+            pizza.setCodigo(txt_codigo.getText().toString());
+
+            if(txt_codigo.getText().toString().isEmpty()){
+                Toast.makeText(getApplicationContext(), "Complete el campo de id", Toast.LENGTH_LONG).show();
+            }else {
+                pizza.EliminarPizza(getApplicationContext());
+                Toast.makeText(getApplicationContext(), "Pizza eliminada", Toast.LENGTH_LONG).show();
+                listarPersonas();
+            }
+        }
+    };
 }
