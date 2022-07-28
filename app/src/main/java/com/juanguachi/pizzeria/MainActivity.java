@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     .createUserWithEmailAndPassword(txtUsurio.getText().toString(), txtContraseña.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(!task.isSuccessful()){
+                            if(task.isSuccessful()){
                                 Intent intent = new Intent(getApplicationContext(),CrudPizzad.class);
                                 startActivity(intent);
                             }else{
