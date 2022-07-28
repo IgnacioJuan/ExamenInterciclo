@@ -16,7 +16,7 @@ public class Pizza {
         PizzeriaSQLHelper pizzeriaSQLHelper= new PizzeriaSQLHelper(context);
         String sql;
         sql="INSERT INTO pizza (codigo,nombre,tamaño,ingredientes,costo,pvp,promocion)" +
-                " VALUES ('" + getCodigo() + "','" + getNombre()+"','"+getNombre()+"','"+getTamaño()+"','"+getIngredientes()+"','"+getCosto()+"','"+getCosto()+"','"+getPvp()+"','"+getPromocion()+"')";
+                " VALUES ('" + getCodigo() + "','"+getNombre()+"','"+getTamaño()+"','"+getIngredientes()+"','"+getCosto()+"','"+getPvp()+"','"+getPromocion()+"')";
         pizzeriaSQLHelper.getWritableDatabase().execSQL(sql);
     }
     public static Cursor ListaPizzas(Context context){
@@ -24,6 +24,20 @@ public class Pizza {
         String sql;
         sql="SELECT _rowid_ as _id, * FROM pizza";
         return pizzeriaSQLHelper.getReadableDatabase().rawQuery(sql,null);
+    }
+
+
+    public void EditarPizza(Context context){
+        PizzeriaSQLHelper pizzeriaSQLHelper= new PizzeriaSQLHelper(context);
+        String sql;
+        sql="Update pizza set nombre='" + getNombre()+"',tamaño='"+getTamaño()+"',ingredientes='"+getIngredientes()+"',costo='"+getCosto()+"',pvp='"+getPvp()+"',promocion='"+getPromocion()+"' where codigo='"+getCodigo()+"'";
+        pizzeriaSQLHelper.getWritableDatabase().execSQL(sql);
+    }
+    public void EliminarPizza(Context context){
+        PizzeriaSQLHelper pizzeriaSQLHelper= new PizzeriaSQLHelper(context);
+        String sql;
+        sql="DELETE FROM pizza where codigo='" +getCodigo()+ "'";
+        pizzeriaSQLHelper.getWritableDatabase().execSQL(sql);
     }
 
     public String getCodigo() {

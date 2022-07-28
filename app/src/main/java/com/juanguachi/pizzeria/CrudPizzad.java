@@ -53,7 +53,7 @@ public class CrudPizzad extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Complete todos los campos", Toast.LENGTH_LONG).show();
             }else {
                 pizza.GuardarPizza(getApplicationContext());
-                Toast.makeText(getApplicationContext(), "Persona creada", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Pizza creada", Toast.LENGTH_LONG).show();
                 listarPersonas();
             }
         }
@@ -68,8 +68,9 @@ public class CrudPizzad extends AppCompatActivity {
     public  void listarPersonas(){
         ListView listView=(ListView) findViewById(R.id.listPizzas);
         Cursor cursor=Pizza.ListaPizzas(getApplicationContext());
-        String[] desde= new String[]{"id","Nombre","estado_civil","tipo_sangre"};
-        int[] hasta = new int[]{R.id.txtID, R.id.txtNOMBRE, R.id.txtESTADO, R.id.txtSANGRE};
+        //codigo,nombre,tamaño,ingredientes,costo,pvp,promocion
+        String[] desde= new String[]{"codigo","nombre","tamaño","ingredientes","costo","pvp","promocion"};
+        int[] hasta = new int[]{R.id.txtCODIGO, R.id.txtNOMBRE, R.id.txtTAMAÑO, R.id.txtINGREDIENTES, R.id.txtCOSTO, R.id.txtPVP, R.id.txtPROMOCION};
         CursorAdapter cursorAdapter= new SimpleCursorAdapter(
                 getApplicationContext(),
                 R.layout.detalle_pizza,
@@ -80,4 +81,6 @@ public class CrudPizzad extends AppCompatActivity {
         listView.setAdapter(cursorAdapter);
         Toast.makeText(getApplicationContext(),"Listando", Toast.LENGTH_LONG).show();
     }
+
+
 }

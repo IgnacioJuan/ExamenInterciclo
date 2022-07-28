@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     .createUserWithEmailAndPassword(txtUsurio.getText().toString(), txtContraseña.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful()){
+                            if(!task.isSuccessful()){
                                 Intent intent = new Intent(getApplicationContext(),CrudPizzad.class);
                                 startActivity(intent);
                             }else{
